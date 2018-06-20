@@ -1,6 +1,4 @@
 import { AddUserMutationArgs, AddMessageMutationArgs } from "@demo/_gql/models";
-import { isDependee, resolveDependee, pipeResolvers } from 'graphql-resolvers'
-import schemas from "@graphql-global/schemas";
 import { addUser } from "@demo/resolvers-typed/mutation/addUser";
 import { addMessage } from "@demo/resolvers-typed/mutation/addMessage";
 

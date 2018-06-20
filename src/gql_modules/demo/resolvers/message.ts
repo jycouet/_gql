@@ -1,5 +1,4 @@
 import { formatedContent } from "@demo/resolvers-typed/message/formatedContent";
-import { Message } from "@demo/_gql/models";
 
 export default {
   Message: {
@@ -11,6 +10,6 @@ export default {
     // author: async (root: any, args: any, ctx: any, info: any) => {
     //   return root.author
     // },
-    formatedContent: async (root: Message, args: never, ctx: never, info: never) => formatedContent(root)
+    formatedContent: async (root: any, args: never, ctx: never, info: never) => formatedContent(root)
   }
 };

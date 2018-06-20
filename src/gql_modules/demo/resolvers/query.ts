@@ -1,5 +1,4 @@
 import { UserQueryArgs } from "@demo/_gql/models";
-import { Db } from "mongodb";
 import { version } from "@demo/resolvers-typed/query/version";
 import { user } from "@demo/resolvers-typed/query/user";
 import { users } from "@demo/resolvers-typed/query/users";
