@@ -1,31 +1,12 @@
 import { AddUserMutationArgs, AddMessageMutationArgs } from "@demo/_gql/models";
 import { isDependee, resolveDependee, pipeResolvers } from 'graphql-resolvers'
 import schemas from "@graphql-global/schemas";
+import { addUser } from "@demo/resolvers-typed/mutation/addUser";
+import { addMessage } from "@demo/resolvers-typed/mutation/addMessage";
 
 export default {
   Mutation: {
-    addUser: async (root: any, args: AddUserMutationArgs, ctx: any, info: any) => {
-      await ctx.db.collection('users').insert({ id: args.id, name: args.name });
-      return `user ${args.name} added`;
-    },
-    addMessage: async (root: any, args: AddMessageMutationArgs, ctx: any, info: any) => {
-      await ctx.db.collection('messages').insert({ idUser: args.idUser, content: args.content });
-      const version = '1';
-      // const version = await info.mergeInfo.delegateToSchema({
-      //   schema: schemas,
-      //   operation: 'query',
-      //   fieldName: `
-        
-        
-        
-      //   `,
-      //   args: {
-      //     id: args.idUser,
-      //   },
-      //   ctx,
-      //   info
-      // });
-      return `message ${args.content} added in version: ${version}`;
-    }
+    addUser: async (root: never, args: AddUserMutationArgs, ctx: any, info: never) => addUser(args, ctx.db),
+    addMessage: async (root: never, args: AddMessageMutationArgs, ctx: any, info: never) => addMessage(args, ctx.db),
   }
 };

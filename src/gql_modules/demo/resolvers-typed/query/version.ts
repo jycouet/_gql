@@ -1,3 +1,3 @@
-export async function getVersion() {
+export async function version(): Promise<string> {
     return 'v1'
 }
