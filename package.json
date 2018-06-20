@@ -6,7 +6,8 @@
     "_gql-all": "ts-node _gql.ts --all",
     "_gql-models": "ts-node _gql.ts --models",
     "api": "nodemon --watch ../graphql-modules --watch src --exec ts-node -r tsconfig-paths/register src/index.ts",
-    "lint": "tslint --project tsconfig.json --exclude '**/models.ts' --exclude '**/node_modules/**' --fix"
+    "lint": "tslint --project tsconfig.json --exclude '**/models.ts' --exclude '**/node_modules/**' --fix",
+    "build": "yarn lint && yarn tsc"
   },
   "devDependencies": {
     "@types/compression": "^0.0.36",

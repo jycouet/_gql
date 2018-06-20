@@ -36,7 +36,7 @@ export async function initServer() {
     }),
   );
 
-  app.listen({ port: 3000 as any }, () => {
+  app.listen({ port: 3000 as number }, () => {
     // tslint:disable-next-line
     console.log('View GraphiQL at http://localhost:3000/graphiql');
   });

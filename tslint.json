@@ -30,6 +30,7 @@
     "no-implicit-dependencies": false,
     "no-duplicate-imports": false,
     "no-submodule-imports": false,
-    "no-bitwise": false
+    "no-bitwise": false,
+    "no-any": true
   }
 }
