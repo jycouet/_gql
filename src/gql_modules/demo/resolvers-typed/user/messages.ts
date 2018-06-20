@@ -1,12 +1,14 @@
-import { Db } from "mongodb";
-import { User, Message } from "@demo/_gql/models";
-import { messagesCollection } from "@demo/connector/db/message";
+import { Message, User } from '@demo/_gql/models';
+import { messagesCollection } from '@demo/connector/db/message';
+import { Db } from 'mongodb';
 
 export async function messages(root: User, db: Db): Promise<Message[]> {
-  let objToRet: Message[] = [];
-  const messages = await messagesCollection(db).find({ idUser: root.id }).toArray();
-  messages.forEach((m: Message) => {
-    objToRet.push({ author: { id: root.id, name: root.name, messages }, content: m.content })
+  const objToRet: Message[] = [];
+  const messageList = await messagesCollection(db)
+    .find({ idUser: root.id })
+    .toArray();
+  messageList.forEach((m: Message) => {
+    objToRet.push({ author: { id: root.id, name: root.name, messages: messageList }, content: m.content });
   });
-  return objToRet
+  return objToRet;
 }

@@ -1,5 +1,5 @@
-import { messages } from "@demo/resolvers-typed/user/messages";
-import { User } from "@demo/_gql/models";
+import { User } from '@demo/_gql/models';
+import { messages } from '@demo/resolvers-typed/user/messages';
 
 export default {
   User: {
@@ -12,5 +12,5 @@ export default {
     //   return root.name
     // },
     messages: async (root: User, args: never, ctx: any, info: never) => messages(root, ctx.db),
-  }
+  },
 };
