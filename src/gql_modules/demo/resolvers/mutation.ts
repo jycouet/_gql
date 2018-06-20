@@ -10,20 +10,21 @@ export default {
     },
     addMessage: async (root: any, args: AddMessageMutationArgs, ctx: any, info: any) => {
       await ctx.db.collection('messages').insert({ idUser: args.idUser, content: args.content });
-      const version = await info.mergeInfo.delegateToSchema({
-        schema: schemas,
-        operation: 'query',
-        fieldName: `
+      const version = '1';
+      // const version = await info.mergeInfo.delegateToSchema({
+      //   schema: schemas,
+      //   operation: 'query',
+      //   fieldName: `
         
         
         
-        `,
-        args: {
-          id: args.idUser,
-        },
-        ctx,
-        info
-      });
+      //   `,
+      //   args: {
+      //     id: args.idUser,
+      //   },
+      //   ctx,
+      //   info
+      // });
       return `message ${args.content} added in version: ${version}`;
     }
   }

@@ -3,9 +3,9 @@ export default {
     // id: async (root: any, args: any, ctx: any, info: any) => {
     //   return root.id
     // },
-    name: async (root: any, args: any, ctx: any, info: any) => {
-      return root.name
-    },
+    // name: async (root: any, args: any, ctx: any, info: any) => {
+    //   return root.name
+    // },
     messages: async (root: any, args: any, ctx: any, info: any) => {
       let objToRet: any[] = [];
       const messages = await ctx.db.collection('messages').find({idUser: root.id}).toArray();
