@@ -1,6 +1,7 @@
 import { Db } from "mongodb";
 import { User } from "@demo/_gql/models";
+import { usersCollection } from "@demo/connector/db/user";
 
-export async function users(db: Db): Promise<User[]>{
-    return await db.collection('users').find().toArray();
+export async function users(db: Db): Promise<User[]> {
+    return await usersCollection(db).find().toArray();
 }
