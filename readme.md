@@ -1,4 +1,4 @@
-# gql-init
+# _gql
 
 Simple example of how to you gql!
 
@@ -9,7 +9,7 @@ Simple example of how to you gql!
 1. `yarn api`
 1. **WoW that's it?!**
 1. yes! //have fun
-1. `yarn build` is linting and building (check that there is NO any!!!)
+1. `yarn build` is linting and building (check that there is **no any**!!!)
 
 ## How to create a new gql_modules
 
