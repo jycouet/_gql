@@ -1,0 +1,39 @@
+{
+  "name": "gql-init",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "_gql-all": "ts-node _gql.ts --all",
+    "_gql-models": "ts-node _gql.ts --models",
+    "api": "nodemon --watch ../graphql-modules --watch src --exec ts-node -r tsconfig-paths/register src/index.ts"
+  },
+  "devDependencies": {
+    "@types/compression": "^0.0.36",
+    "@types/express": "^4.11.1",
+    "@types/graphql": "^0.13.1",
+    "@types/mongodb": "^3.0.19",
+    "@types/rimraf": "^2.0.2",
+    "@types/shelljs": "^0.8.0",
+    "cross-env": "^5.1.6",
+    "graphql-code-generator": "0.9.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.2",
+    "express": "^4.16.3",
+    "graphql": "^0.13.2",
+    "graphql-codegen-typescript-mongodb-template": "^0.9.1",
+    "graphql-resolvers": "^0.2.2",
+    "graphql-server-express": "^1.3.6",
+    "graphql-tag": "^2.9.2",
+    "graphql-tools": "^3.0.2",
+    "merge-graphql-schemas-temp": "^1.5.1",
+    "mongodb": "^3.0.10",
+    "nodemon": "^1.17.5",
+    "rimraf": "^2.6.2",
+    "shelljs": "^0.8.2",
+    "ts-node": "^6.1.0",
+    "tsconfig-paths": "^3.3.2",
+    "typescript": "^2.9.1"
+  }
+}
