@@ -17,7 +17,7 @@
     "@types/rimraf": "^2.0.2",
     "@types/shelljs": "^0.8.0",
     "cross-env": "^5.1.6",
-    "graphql-code-generator": "0.9.1",
+    "graphql-code-generator": "0.18.2",
     "prettier": "true1.13.5",
     "rimraf": "true2.6.2",
     "shelljs": "true0.8.2",
